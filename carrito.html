@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="logo-titulo">
+                <img src="img/logo.jpg" alt="Logo" class="logo">
+                <h1>The Perfume Store</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="sobre.html">Sobre Nosotros</a></li>
+                <li><a href="carrito.html" id="carrito">Carrito (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Tu carrito</h2>
+            <ul id="lista-carrito"></ul>
+            <div class="resumen-compra">
+                <h3>Resumen del Carrito</h3>
+                <div id="resumen-productos"></div>
+                <p class="total">Total: $<span id="total-compra">0</span></p>
+                <button id="btn-vaciar" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                <button id="btn-finalizar" onclick="mostrarFormularioPago()">Finalizar Compra</button>
+            </div>
+
+
+            <!-- Formulario de pago -->
+            <div id="formulario-pago" style="display: none;">
+                <h3>Datos de Pago y Envío</h3>
+                <form id="form-pago" onsubmit="procesarPago(event)">
+                    <div class="form-grupo">
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" 
+                            title="Solo se permiten letras y espacios" required>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="dni">DNI:</label>
+                        <input type="text" id="dni" pattern="[0-9]{7,8}" 
+                            title="Ingrese un DNI válido de 7 u 8 números" required>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="tarjeta">Número de tarjeta:</label>
+                        <input type="text" id="tarjeta" pattern="[0-9]{16}" 
+                            title="Ingrese los 16 números de su tarjeta" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="codigo-seguridad">Código de seguridad:</label>
+                        <input type="text" id="codigo-seguridad" pattern="[0-9]{3}" 
+                            title="Ingrese los 3 números del código de seguridad" required>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="direccion">Dirección de envío:</label>
+                        <textarea id="direccion" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Confirmar Pago</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Perfumes</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda online de perfumes exclusivos y fragancias únicas">
+    <title>The Perfume Store - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="banner"></div>
+            <div class="logo-titulo">
+                <img src="img/logo.jpg" alt="Logo" class="logo">
+                <h1>The Perfume Store</h1>
+            </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="sobre.html">Sobre Nosotros</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner-promocional">
+        <img src="img/louis.webp" alt="Proximamente Louis Vuitton">
+        <div class="banner-texto">
+            <h2>Proximamente, Louis Vuitton</h2>
+            <p>La línea de perfumes Louis Vuitton llegará muy pronto. Prepárate para vivir una experiencia olfativa única con sus aromas irresistibles y exclusivos.</p>
+        </div>
+    </div>
+
+    <div class="contenido-principal">
+        <section>
+            <h2>Productos Destacados</h2>
+            <div class="productos">
+                <div class="producto">
+                    <img src="img/descarga.jpeg" alt="Kismet Angel" width="150">
+                    <p>Kismet Angel - $200</p>
+                    <button onclick="agregarAlCarrito('Kismet Angel', 200)">Agregar al carrito</button>
+                </div>
+                
+                <div class="producto">
+                    <img src="img/lataffa khamrah.jpeg" alt="Lataffa Khamrah" width="150">
+                    <p>Lataffa Khamrah - $120</p>
+                    <button onclick="agregarAlCarrito('Lataffa Khamrah', 120)">Agregar al carrito</button>
+                </div>
+                
+                <div class="producto">
+                    <img src="img/Gaame of spades queen.jpeg" alt="Game Of Spades Queen" width="150">
+                    <p>Game Of Spades Queen - $180</p>
+                    <button onclick="agregarAlCarrito('Game Of Spades Queen', 180)">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="productos.html" style="text-decoration: none;">
+                    <button>Ver todos los productos</button>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 The Perfume Store. Todos los derechos reservados.</p>
+            <nav class="footer-nav">
+                <a>Política de Privacidad</a>
+                <a>Términos y Condiciones</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
